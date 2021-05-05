@@ -1,4 +1,4 @@
-import TextLoop from 'react-text-loop'
+import TextLoop from '@jcdea/react-text-loop'
 export const Home = (): JSX.Element => (
   <div className="container font-roboto-mono prose">
     <h1 className="text-6xl py-2">Hi, I{"'"}m JcdeA</h1>
