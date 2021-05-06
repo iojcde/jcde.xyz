@@ -1,19 +1,23 @@
-import TextLoop from '@jcdea/react-text-loop'
 import Link from 'next/link'
-
+import Typewriter from 'typewriter-effect'
 export const Home = (): JSX.Element => (
-  <div className="container font-roboto-mono prose">
+  <div className="container prose">
     <h1 className="text-6xl py-2">Hi, I{"'"}m JcdeA</h1>
     <p className="text-xl md:text-2xl">
-      <TextLoop interval={2500} className="text-black dark:text-white">
-        <span>Next.js</span>
-        <span>Full stack</span>
-        <span>Python</span>
-        <span>Node.js</span>
-        <span>Discord.js</span>
-        <span>Docker</span>
-        <span>Linux</span>
-      </TextLoop>{' '}
+      <span className="inline-block">
+        <Typewriter
+          // eslint-disable-next-line @typescript-eslint/no-empty-function
+          onInit={() => {}}
+          options={{
+            strings: ['Next.js', 'TypeScript'],
+            autoStart: true,
+            delay: 40,
+            loop: true,
+            cursor: '｜',
+            cursorClassName: 'typed-cursor',
+          }}
+        />
+      </span>{' '}
       Developer building unique experiences
     </p>
     <Link href="/info">More about me</Link>
