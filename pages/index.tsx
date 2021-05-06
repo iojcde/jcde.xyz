@@ -1,29 +1,61 @@
 import Link from 'next/link'
+import 'd2coding/d2coding-full.css'
+
 import Typewriter from 'typewriter-effect'
 export const Home = (): JSX.Element => (
-  <div className="container prose">
-    <h1 className="text-6xl py-2">Hi, I{"'"}m JcdeA</h1>
-    <p className="text-xl md:text-2xl">
+  <>
+    <h1 className="text-5xl py-2">Hi, I{"'"}m JcdeA</h1>
+    <div className="text-lg md:text-xl">
       <span className="inline-block">
         <Typewriter
           // eslint-disable-next-line @typescript-eslint/no-empty-function
           onInit={() => {}}
           options={{
-            strings: ['Next.js', 'TypeScript'],
+            strings: [
+              'Next.js',
+              'TypeScript',
+              'Python',
+              'Docker',
+              'Discord.js',
+              'Linux',
+              'Full stack',
+            ],
             autoStart: true,
-            delay: 40,
+            delay: 80,
             loop: true,
-            cursor: '｜',
+            cursor: '_',
             cursorClassName: 'typed-cursor',
           }}
         />
-      </span>{' '}
+      </span>
       Developer building unique experiences
-    </p>
-    <Link href="/info">More about me</Link>
-    <h2 className="text-3xl md:text-4xl pt-10">Teams</h2>
-    <p>Team int</p>
-  </div>
+    </div>
+    <Link href="/about">
+      {/* w-full sm:w-auto flex-none bg-gray-900 hover:bg-gray-700 text-white text-lg leading-6 font-semibold py-3 px-6  */}
+      <div className="bg-red-500 items-center justify-center hover:bg-red-400 text-white inline-flex align-center w-auto py-1 px-2 md:py-2 md:px-4  text-sm md:text-lg mt-6 mb-8 group hover:pr-2 border border-red-200 border-transparent rounded-md focus:ring-2 focus:ring-offset-2 focus:ring-offset-red-500 focus:ring-gray-900 focus:outline-none transition-colors duration-200">
+        <span className="text-md leading-7">Learn more</span>
+        <svg
+          className="h-6 ml-2 md:h-8 md:ml-4 group-hover:ml-2 md:group-hover:ml-6"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M17 8l4 4m0 0l-4 4m4-4H3"
+          />
+        </svg>
+      </div>
+    </Link>
+
+    <h2 className="title mt-4">Teams</h2>
+    <div className="text-xl content link ">
+      <Link href="https://github.com/Team-Int">Team int</Link>
+    </div>
+  </>
 )
 
 export default Home
