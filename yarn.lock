@@ -348,11 +348,6 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fontsource/jetbrains-mono@^4.2.2":
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/@fontsource/jetbrains-mono/-/jetbrains-mono-4.2.2.tgz#925cbcdb4e21f48320f8db3ccb4ca50dff2465a6"
-  integrity sha512-aCwLIqfZZrZjy+cIx/9hSzxyOcz8YzMbd3VQ8QRkS2MB3+XsXAnMLEkELXLCfKYUkEysRECaq5s7+Qhi1hgZAA==
-
 "@fullhuman/postcss-purgecss@^3.1.3":
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/@fullhuman/postcss-purgecss/-/postcss-purgecss-3.1.3.tgz#47af7b87c9bfb3de4bc94a38f875b928fffdf339"
@@ -1603,7 +1598,7 @@ char-regex@^1.0.2:
   resolved "https://registry.yarnpkg.com/char-regex/-/char-regex-1.0.2.tgz#d744358226217f981ed58f479b1d6bcc29545dcf"
   integrity sha512-kWWXztvZ5SBQV+eRgKFeh8q5sLuZY2+8WUIzlxWVTg+oGwY14qylx1KbKzHd8P6ZYkAg0xyIDU9JMHhyJMZ1jw==
 
-chokidar@3.5.1, "chokidar@>=3.0.0 <4.0.0", chokidar@^3.5.1:
+chokidar@3.5.1, chokidar@^3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.5.1.tgz#ee9ce7bbebd2b79f49f304799d5468e31e14e68a"
   integrity sha512-9+s+Od+W0VJJzawDma/gvBNQqkTiqYTWLuZoyAsivsI4AaWTCzHG06/TMjsf1cYe9Cb97UCEhjz7HvnPk2p/tw==
@@ -1950,6 +1945,11 @@ csstype@^3.0.2:
   version "3.0.8"
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.0.8.tgz#d2266a792729fb227cd216fb572f43728e1ad340"
   integrity sha512-jXKhWqXPmlUeoQnF/EhTtTl4C9SnrxSH/jZUih3jmO6lBKr99rP3/+FmrMj4EFpOXzMtXHAZkd3x0E6h6Fgflw==
+
+d2coding@^1.3.2:
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/d2coding/-/d2coding-1.3.2.tgz#3b0a768ff48c6c1d34e8c9b168cb46d6230565bd"
+  integrity sha512-g+Dgy1ZSAKTgWIl2jhpr6K3keFic8aapOFlVh74eoBYPbjGq5lMdEzANG5w6hFX1fzQBsaAzhuTYICRjyt4OcA==
 
 damerau-levenshtein@^1.0.6:
   version "1.0.6"
@@ -5577,13 +5577,6 @@ sane@^4.0.3:
     micromatch "^3.1.4"
     minimist "^1.1.1"
     walker "~1.0.5"
-
-sass@^1.32.12:
-  version "1.32.12"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.32.12.tgz#a2a47ad0f1c168222db5206444a30c12457abb9f"
-  integrity sha512-zmXn03k3hN0KaiVTjohgkg98C3UowhL1/VSGdj4/VAAiMKGQOE80PFPxFP2Kyq0OUskPKcY5lImkhBKEHlypJA==
-  dependencies:
-    chokidar ">=3.0.0 <4.0.0"
 
 saxes@^5.0.1:
   version "5.0.1"

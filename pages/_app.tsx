@@ -1,4 +1,6 @@
 import 'styles/global.css'
+import 'd2coding/d2coding-full.css'
+
 import React from 'react'
 import { AppProps } from 'next/app'
 import Layout from '../components/layout'

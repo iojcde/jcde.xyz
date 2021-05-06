@@ -1,11 +1,12 @@
 const { colors } = require('tailwindcss/defaultTheme')
 
 module.exports = {
+  mode:'jit',
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     fontFamily: {
-      'roboto-mono': ['Roboto Mono', 'monospace']
+      'd2coding': [ 'D2Coding', 'monospace']
     },
     container: {
       center: true
@@ -29,6 +30,7 @@ module.exports = {
     },
     extend: {
       typography: (theme) => ({
+        
         DEFAULT: {
           css: {
             color: theme('colors.grey.800'),
@@ -72,7 +74,6 @@ module.exports = {
             p: {
               color: theme('colors.grey.800'),
               'margin-top': '0',
-              'margin-bottom': '1em'
             },
             img: {
               'margin-top': '0',
@@ -134,7 +135,7 @@ module.exports = {
             p: {
               color: 'white',
               'margin-top': '0',
-              'margin-bottom': '1em'
+              
             },
             img: {
               'margin-top': '0',
