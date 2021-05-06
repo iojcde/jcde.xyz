@@ -3,23 +3,12 @@
 # Note that environment variables can be set in several places
 # See https://docs.gitlab.com/ee/ci/variables/#priority-of-environment-variables
 stages:
-- test
 - build-app
 - build-image
 - deploy
 
 variables:
   GIT_CLEAN_FLAGS: "-x -f -e public/**"
-
-
-test:
-  stage: test
-
-  image: "node:14.16.0-alpine3.10"
-
-  script: 
-  - yarn 
-  - yarn test
 
 
 

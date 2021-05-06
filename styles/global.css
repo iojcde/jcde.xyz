@@ -1,0 +1,36 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes blink {
+  0% { opacity: 1; }
+ 49% { opacity: 1; }
+ 50% { opacity: 0; }
+100% { opacity: 0; }
+}
+.typed-cursor{
+  opacity: 1;
+  transition: none;
+  animation: blink 1s infinite;
+}
+.title{
+  @apply text-3xl md:text-4xl ;
+}
+.link {
+  color: theme('colors.red.500');
+  text-decoration: 'none';
+  width: fit-content;
+  height: fit-content;
+
+  text-decoration: none;
+ 
+}
+.link:hover{
+  background-color: theme('colors.red.500');
+  color:white;
+}
+.link:active{
+  background-color: theme('colors.red.500');
+  color:white;
+}
