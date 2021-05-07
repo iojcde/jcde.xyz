@@ -9,7 +9,8 @@
     "start": "next start",
     "type-check": "tsc --pretty --noEmit",
     "lint": "eslint .  --fix --ext ts --ext tsx --ext js",
-    "export":"next export"
+    "test": "jest",
+    "test-all": "yarn lint && yarn type-check && yarn test"
   },
   "husky": {
     "hooks": {
