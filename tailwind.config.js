@@ -1,12 +1,13 @@
 const { colors } = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  mode:'jit',
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: 'class', // or 'media' or 'class'
+  purge: ['./components/*.{js,ts,jsx,tsx,mdx}', './components/**/*.{js,ts,jsx,tsx,mdx}', './pages/*.{js,ts,jsx,tsx,mdx}', './pages/**/*.{js,ts,jsx,tsx,mdx}'],
+  darkMode: 'class',
+  prefix: '',
+  separator: ':',
   theme: {
     fontFamily: {
-      'd2coding': [ 'D2Coding', 'monospace']
+      'd2coding': ['D2Coding', 'monospace']
     },
     container: {
       center: true
@@ -30,10 +31,9 @@ module.exports = {
     },
     extend: {
       typography: (theme) => ({
-        
         DEFAULT: {
           css: {
-            color: theme('colors.grey.800'),
+            color: theme('colors.gray.800'),
             a: {
               color: theme('colors.red.500'),
               'text-decoration': 'none',
@@ -49,46 +49,48 @@ module.exports = {
               color: theme('colors.red.500')
             },
             h1: {
-              color: theme('colors.grey.800'),
+              color: theme('colors.gray.800'),
               'margin-top': '0'
             },
             h2: {
-              color: theme('colors.grey.800'),
+              color: theme('colors.gray.800'),
               'margin-top': '0'
             },
             h3: {
-              color: theme('colors.grey.800'),
+              color: theme('colors.gray.800'),
               'margin-top': '0'
             },
             h4: {
-              color: theme('colors.grey.800'),
+              color: theme('colors.gray.800'),
               'margin-top': '0'
             },
             code: {
               color: 'white',
-              'background-color': theme('colors.grey.800'),
+              'background-color': theme('colors.gray.800'),
               '&:before, &:after': {
                 display: 'none'
               }
             },
             p: {
-              color: theme('colors.grey.800'),
+              color: theme('colors.gray.800'),
               'margin-top': '0',
+              'margin-bottom': '1em'
             },
             img: {
               'margin-top': '0',
               'margin-bottom': '0',
-              'box-shadow': '0px 2px 4px -2px rgba(0, 0, 0, 30%)'
+              'cornder-radius':'5px',
+              'box-shadow':'0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
             },
             'ul > li': {
               '&::before': {
-                'background-color': theme('colors.grey.800'),
+                'background-color': theme('colors.gray.800'),
                 'font-weight': 'bold'
               }
             },
             'ol > li': {
               '&::before': {
-                color: theme('colors.grey.800'),
+                color: theme('colors.gray.800'),
                 'font-weight': 'bold'
               }
             }
@@ -126,7 +128,7 @@ module.exports = {
               'margin-top': '0'
             },
             code: {
-              color: theme('colors.grey.800'),
+              color: theme('colors.gray.800'),
               'background-color': 'white',
               '&:before, &:after': {
                 display: 'none'
@@ -135,7 +137,7 @@ module.exports = {
             p: {
               color: 'white',
               'margin-top': '0',
-              
+              'margin-bottom': '1em'
             },
             img: {
               'margin-top': '0',
@@ -167,7 +169,7 @@ module.exports = {
       borderWidth: ['last'],
       transitionDuration: ['hover'],
       transitionProperty: ['hover'],
-      margin: ['last'],
+      margin: ['last','group-hover'],
       padding: ['last', 'hover'],
       height: ['group-hover'],
       typography: ['dark']
