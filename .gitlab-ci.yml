@@ -5,6 +5,9 @@
 stages:
 - deploy
 
+variables:
+  GIT_CLEAN_FLAGS: "-x -f -e public/**"
+
 
 
 pages:
