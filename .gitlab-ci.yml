@@ -3,8 +3,6 @@
 # Note that environment variables can be set in several places
 # See https://docs.gitlab.com/ee/ci/variables/#priority-of-environment-variables
 stages:
-- build-app
-- build-image
 - deploy
 
 variables:
@@ -12,14 +10,16 @@ variables:
 
 
 
-build app:
-  stage: build-app
+pages:
+  stage: deploy
 
   image: "node:14.16.0-alpine3.10"
 
   script:
   - yarn
   - yarn build
+  - yarn export
+  - mv out/* public/
 
   cache:
     paths:
@@ -28,60 +28,8 @@ build app:
 
   artifacts:
     paths:
-    - ".next/"
+    - public
     expire_in: 1 day
-
-
-
-build image:
-  stage: build-image
-
-  artifacts:
-    paths:
-    - ".next/"
-
-  image: "docker:latest"
-
-  services:
-  - "docker:dind"
-
-  script:
-  - docker info
-  - echo $CI_REGISTRY_PASSWORD | docker login --username $CI_REGISTRY_USER $CI_REGISTRY
-    --password-stdin
-  - docker pull $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG || docker pull $CI_REGISTRY_IMAGE:main
-    || true
-  - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA --cache-from=$CI_REGISTRY_IMAGE:$CI_BUILD_REF_NAME
-    --cache-from=$CI_REGISTRY_IMAGE:main --shm-size 512M  .
-  - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
-  - docker tag $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
-  - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
-
-
-
-deploy to production:
-  image: "alpine:latest"
-
-  stage: deploy
-
-  tags:
-  - deployment
-
-  script:
-  - chmod og= $ID_RSA
-  - export PROJECT_PATH=$(echo $CI_PROJECT_PATH | tr '/' _)
-  - apk update && apk add openssh-client
-  - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY"
-  - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "docker pull $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG"
-  - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "docker container rm -f $PROJECT_PATH || true"
-  - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "docker run -d -p 3001:5000 --restart always --name $PROJECT_PATH $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG"
-  
-  environment:
-    name: production
-    url: https://jcde.xyz
-
   only:
-  - main
-
-
+    - master
 
