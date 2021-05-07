@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import 'd2coding/d2coding-full.css'
+
 export const Home = (): JSX.Element => (
   <>
     <h1 className="text-5xl py-2">Hi, I{"'"}m JcdeA</h1>

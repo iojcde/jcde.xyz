@@ -1,6 +1,7 @@
 import Footer from 'components/footer'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import Head from 'next/head'
 
 type LayoutProps = {
   children: React.ReactNode
@@ -11,6 +12,8 @@ const Layout: React.FC = ({ children }: LayoutProps) => {
   const notHome = router.pathname !== '/'
   return (
     <>
+    <Head>
+      <link href="//cdn.jsdelivr.net/gh/wan2land/d2coding/d2coding-full.css" rel="preload" as ="style" /></Head>
       <div className="font-d2coding z-10 w-screen px-4 dark:bg-gray-900 transition-colors duration-200 max-w-3xl mx-auto">
         {notHome && (
           <div className="mt-2">
