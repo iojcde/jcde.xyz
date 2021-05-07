@@ -7,10 +7,6 @@ stages:
 - build-image
 - deploy
 
-variables:
-  GIT_CLEAN_FLAGS: "-x -f -e public/**"
-
-
 
 build app:
   stage: build-app
