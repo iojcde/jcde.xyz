@@ -9,6 +9,7 @@
  50% { opacity: 0; }
 100% { opacity: 0; }
 }
+
 .typed-cursor{
   opacity: 1;
   transition: none;
@@ -33,4 +34,24 @@
 .link:active{
   background-color: theme('colors.red.500');
   color:white;
+}
+@font-face {
+  font-family: 'D2Coding';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/static/fonts/D2Coding.woff2') format('woff2'),
+       url('/static/fonts/D2Coding.woff') format('woff'),
+       url('/static/fonts/D2Coding.ttf') format('truetype'),
+       url('/static/fonts/D2Coding.svg') format('svg');
+}
+@font-face {
+  font-family: 'D2Coding';
+  font-style: normal;
+  font-weight: 700;
+  font-display:swap;
+  src: url('/static/fonts/D2CodingBold.woff2') format('woff2'),
+       url('/static/fonts/D2CodingBold.woff') format('woff'),
+       url('/static/fonts/D2CodingBold.ttf') format('truetype'),
+       url('/static/fonts/D2CodingBold.svg') format('svg');
 }
