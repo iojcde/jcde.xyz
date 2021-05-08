@@ -12,7 +12,7 @@ const Layout: React.FC = ({ children }: LayoutProps) => {
   return (
     <>
       <SEO />
-      <div className="font-d2coding z-10 w-screen px-4 dark:bg-gray-900 transition-colors duration-200 max-w-3xl mx-auto">
+      <div className="font-mono z-10 w-screen px-4 dark:bg-gray-900 transition-colors duration-200 max-w-3xl mx-auto">
         {notHome && (
           <div className="mt-2">
             <Link href="/">

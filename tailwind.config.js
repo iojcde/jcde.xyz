@@ -7,7 +7,7 @@ module.exports = {
   separator: ':',
   theme: {
     fontFamily: {
-      'mono': [' Andalé Mono', 'monospace']
+      'mono': ['Fira Code', 'monospace']
     },
     container: {
       center: true
