@@ -1,14 +1,6 @@
 export const About = (): JSX.Element => {
   return (
     <div className="prose  prose-lg">
-      <h3>
-        <i>
-          &quot;Software is like sex; it&#39;s better when it&#39;s free&quot;
-        </i>
-      </h3>
-
-      <p> - Linus Torvalds</p>
-
       <a href="https://github.com/anuraghazra/github-readme-stats">
         <img
           src="https://github-readme-stats.vercel.app/api?username=JcdeA&count_private=true"
