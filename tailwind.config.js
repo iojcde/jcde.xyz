@@ -50,19 +50,24 @@ module.exports = {
             },
             h1: {
               color: theme('colors.gray.800'),
-              'margin-top': '0'
+              'font-size': '2.5rem',
+              'margin-top': '1rem',
+              'margin-bottom': '0.5rem'
             },
             h2: {
               color: theme('colors.gray.800'),
-              'margin-top': '0'
+              'font-size':'1.8rem',
+              'margin-top': '0.5rem',
+              'font-weight':'500'
+
             },
             h3: {
               color: theme('colors.gray.800'),
-              'margin-top': '0'
+              'margin-top': '1rem',
             },
             h4: {
               color: theme('colors.gray.800'),
-              'margin-top': '0'
+              'margin-top': '1rem',
             },
             code: {
               color: 'white',
@@ -84,13 +89,13 @@ module.exports = {
             },
             'ul > li': {
               '&::before': {
-                'background-color': theme('colors.gray.800'),
+                'background-color': theme('colors.gray.800')+' !important',
                 'font-weight': 'bold'
               }
             },
             'ol > li': {
               '&::before': {
-                color: theme('colors.gray.800'),
+                'color': theme('colors.gray.800'),
                 'font-weight': 'bold'
               }
             }

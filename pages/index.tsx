@@ -1,11 +1,16 @@
+import SEO from 'components/seo'
+import Card from 'components/card'
 import Link from 'next/link'
 
 export const Home = (): JSX.Element => (
   <>
-    <h1 className="text-5xl py-2">Hi, I{"'"}m JcdeA</h1>
+    <SEO title="Home" />
+    <h1 className="text-5xl md:mt-8 py-2">Hi, I{"'"}m JcdeA</h1>
     <div className="text-lg md:text-xl">
       <span className="inline-block"></span>
-      Student Developer building unique experiences
+      Student Developer building{' '}
+      <span className="hover:underline hover:font-semibold">unique</span>{' '}
+      experiences
     </div>
     <Link href="/about">
       {/* w-full sm:w-auto flex-none bg-gray-900 hover:bg-gray-700 text-white text-lg leading-6 font-semibold py-3 px-6  */}
@@ -27,11 +32,12 @@ export const Home = (): JSX.Element => (
         </svg>
       </div>
     </Link>
-
-    <h2 className="title mt-4">Teams</h2>
-    <div className="text-xl content link ">
-      <Link href="https://github.com/Team-Int">Team int</Link>
-    </div>
+    <Card
+      height="339"
+      width="194"
+      image="/static/images/int.xyz.webp"
+      url="https://teamint.xyz"
+    />
   </>
 )
 

@@ -66,8 +66,9 @@
   animation: blink 1s infinite;
 }
 .title{
-  @apply text-3xl md:text-4xl ;
+  @apply text-2xl md:text-4xl font-medium ;
 }
+
 .link {
   color: theme('colors.red.500');
   text-decoration: 'none';
