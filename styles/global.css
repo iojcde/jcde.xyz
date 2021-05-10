@@ -66,7 +66,7 @@
   animation: blink 1s infinite;
 }
 .title{
-  @apply text-2xl md:text-4xl font-medium ;
+  @apply text-2xl md:text-4xl font-medium pb-1 ;
 }
 
 .link {
