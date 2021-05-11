@@ -1,5 +1,4 @@
 import SEO from 'components/seo'
-import Card from 'components/card'
 import Link from 'next/link'
 
 export const Home = (): JSX.Element => (
@@ -32,36 +31,6 @@ export const Home = (): JSX.Element => (
         </svg>
       </div>
     </Link>
-
-    <p className="pt-20 font-semibold text-4xl md:text-5xl mb-4 text-center">
-      Projects
-    </p>
-    <div className="flex flex-wrap gap-4">
-      <Card
-        height="160"
-        width="100"
-        image="/static/images/int.xyz.webp"
-        url="https://teamint.xyz"
-      />
-      <Card
-        height="180"
-        width="100"
-        image="/static/images/recruit.int.xyz.webp"
-        url="/"
-      />
-      <Card
-        height="140"
-        width="220"
-        image="/static/images/jcde.xyz.webp"
-        url="/"
-      />
-      <Card
-        height="154"
-        width="220"
-        image="/static/images/indent.jcde.xyz.webp"
-        url="/"
-      />
-    </div>
   </>
 )
 
