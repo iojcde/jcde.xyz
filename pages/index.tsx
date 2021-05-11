@@ -5,7 +5,7 @@ import Link from 'next/link'
 export const Home = (): JSX.Element => (
   <>
     <SEO title="Home" />
-    <h1 className="text-5xl mt-8 md:mt-20 py-2">Hi, I{"'"}m JcdeA</h1>
+    <h1 className="text-5xl md:mt-8 py-2">Hi, I{"'"}m JcdeA</h1>
     <div className="text-lg md:text-xl">
       <span className="inline-block"></span>
       Student Developer building{' '}
@@ -32,36 +32,12 @@ export const Home = (): JSX.Element => (
         </svg>
       </div>
     </Link>
-
-    <p className="pt-20 font-semibold text-4xl md:text-5xl mb-4 text-center">
-      Projects
-    </p>
-    <div className="flex flex-wrap gap-4">
-      <Card
-        height="160"
-        width="100"
-        image="/static/images/int.xyz.webp"
-        url="https://teamint.xyz"
-      />
-      <Card
-        height="180"
-        width="100"
-        image="/static/images/recruit.int.xyz.webp"
-        url="/"
-      />
-      <Card
-        height="140"
-        width="220"
-        image="/static/images/jcde.xyz.webp"
-        url="/"
-      />
-      <Card
-        height="154"
-        width="220"
-        image="/static/images/indent.jcde.xyz.webp"
-        url="/"
-      />
-    </div>
+    <Card
+      height="339"
+      width="194"
+      image="/static/images/int.xyz.webp"
+      url="https://teamint.xyz"
+    />
   </>
 )
 
