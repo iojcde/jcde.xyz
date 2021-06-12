@@ -86,3 +86,9 @@
   background-color: theme('colors.red.500');
   color:white;
 }
+.hover-rotate {
+  transition: transform .7s ease-in-out;
+}
+.hover-rotate:hover {
+  transform: rotate(360deg);
+}
