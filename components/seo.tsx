@@ -10,33 +10,30 @@ const SEO: React.FC<{ title: string }> = ({ title }) => {
         rel="prefetch"
         href="https://github-readme-stats.vercel.app/api?username=JcdeA&count_private=true"
       />
-      <link
-        rel="prefetch"
-        href="https://github-readme-stats.vercel.app/api?username=JcdeA&count_private=true"
-      />
+
       <link
         rel="preload"
         href="/static/fonts/jetbrains-mono-v6-latin-regular.woff2"
         as="font"
-        type="font/woff2"
+        crossOrigin="anonymous"
       />
       <link
         rel="preload"
         href="/static/fonts/jetbrains-mono-v6-latin-700.woff2"
         as="font"
-        type="font/woff2"
+        crossOrigin="anonymous"
       />
       <link
         rel="preload"
         href="/static/fonts/jetbrains-mono-v6-latin-500.woff2"
         as="font"
-        type="font/woff2"
+        crossOrigin="anonymous"
       />
       <link
         rel="preload"
         href="/static/fonts/jetbrains-mono-v6-latin-300.woff2"
         as="font"
-        type="font/woff2"
+        crossOrigin="anonymous"
       />
       <meta
         name="viewport"
