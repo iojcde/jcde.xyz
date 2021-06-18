@@ -70,7 +70,7 @@
 }
 
 .link {
-  color: theme('colors.red.500');
+  color: theme('colors.rose.500');
   text-decoration: 'none';
   width: fit-content;
   height: fit-content;
@@ -79,11 +79,11 @@
  
 }
 .link:hover{
-  background-color: theme('colors.red.500');
+  background-color: theme('colors.rose.500');
   color:white;
 }
 .link:active{
-  background-color: theme('colors.red.500');
+  background-color: theme('colors.rose.500');
   color:white;
 }
 .hover-rotate {
