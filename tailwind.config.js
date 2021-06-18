@@ -27,7 +27,7 @@ module.exports = {
       },
       white: colors.white,
       black: colors.black,
-      red: colors.rose,
+      red: colors.red,
       yellow: colors.yellow,
     },
     extend: {
@@ -36,18 +36,18 @@ module.exports = {
           css: {
             color: theme('colors.gray.800'),
             a: {
-              color: theme('colors.red.500'),
+              color: theme('colors.black'),
               'text-decoration': 'none',
               '&:hover, &.active': {
                 color: 'white',
-                'background-color': theme('colors.red.500'),
+                'background-color': theme('colors.black'),
                 strong: {
                   color: 'white'
                 },
               },
             },
             strong: {
-              color: theme('colors.red.500')
+              color: theme('colors.black')
             },
             h1: {
               color: theme('colors.gray.800'),
@@ -107,15 +107,15 @@ module.exports = {
           css: {
             color: 'white',
             a: {
-              color: theme('colors.red.500'),
+              color: theme('colors.black'),
               'text-decoration': 'none',
               '&:hover, &.active': {
                 color: 'white',
-                'background-color': theme('colors.red.500'),
+                'background-color': theme('colors.black'),
               },
             },
             strong: {
-              color: theme('colors.red.500')
+              color: theme('colors.black')
             },
             h1: {
               color: 'white',
