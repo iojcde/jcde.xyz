@@ -25,6 +25,7 @@ build app:
   artifacts:
     paths:
     - ".next/"
+    - ".next.config.js"
     expire_in: 1 day
 
 
@@ -35,6 +36,7 @@ build image:
   artifacts:
     paths:
     - ".next/"
+    - ".next.config.js"
 
   image: "docker:latest"
 
