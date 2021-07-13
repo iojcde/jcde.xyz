@@ -1,20 +1,34 @@
 import SEO from 'components/seo'
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 import Tag from '../components/tag'
 
-export const Home: React.FC<{ desc: string }> = ({ desc }) => {
-  function refresh(): void {
-    window.location.reload()
+export const Home: React.FC<{ desc: string }> = () => {
+  const [data, setData] = useState<string>(
+    '<div class="max-w-2xl"><span class="inline-block ">The Student developer&nbsp;</span><span class="inline hover:underline font-bold"><br>your grandparents warned you about.</span></div>'
+  )
+  const [index, setIndex] = useState<number>(1)
+
+  async function refresh(): Promise<void> {
+    fetch(`/api/desc/${index}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data.data)
+        setIndex(data.index)
+      })
   }
   return (
     <>
       <SEO title="Home" />
-      <h1 className="text-5xl mt-8 md:mt-20 py-2">Hi, I{"'"}m JcdeA</h1>
+      <h1 className="text-5xl mt-6 md:mt-20 py-2">Hi, I{"'"}m JcdeA</h1>
       <div className="text-lg md:text-xl">
         <div className="mb-0">
-          <div dangerouslySetInnerHTML={{ __html: desc }} />
-          <button className="text-sm" title="Refresh" onClick={refresh}>
+          <div dangerouslySetInnerHTML={{ __html: data }} />
+          <button
+            className="text-sm focus:outline-none"
+            title="Refresh"
+            onClick={refresh}
+          >
             <svg
               stroke="currentColor"
               fill="currentColor"
@@ -22,7 +36,7 @@ export const Home: React.FC<{ desc: string }> = ({ desc }) => {
               viewBox="0 0 24 24"
               height="1em"
               width="1em"
-              className="hover-rotate"
+              className="hover-rotate "
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -55,54 +69,42 @@ export const Home: React.FC<{ desc: string }> = ({ desc }) => {
           </div>
         </Link>
       </div>{' '}
-      <p className="md:pt-12 text-2xl">Skills</p>
+      <p className="md:pt-11 text-2xl">Skills</p>
       <div className="flex my-2 flex-wrap gap-2">
         <Tag text="Next.js" />
         <Tag text="Tailwindcss" />
         <Tag text="TypeScript" />
-        <Tag text="Blitz.js" />
-        <Tag text="CSS" />
-        <Tag text="HTML" />
+        <Tag text="JavaScript" />
+        <Tag text="Golang" />
+        <Tag text="Rust" />
+        <Tag text="HTTP/2" />
+        <Tag text="HTTPS" />
         <Tag text="Linux" />
         <Tag text="Git" />
-        <Tag text="HTTP/2" />
+        <Tag text="Blitz.js" />
         <Tag text="Python" />
-        <Tag text="Arch Linux" />
         <Tag text="Docker" />
         <Tag text="Kubernetes" />
-        <Tag text="GoLang" />
         <Tag text="GraphQL" />
         <Tag text="Discord.js" />
+        <Tag text="..." />
       </div>
-      <p className="pt-8 text-2xl pb-1">Contact me:</p>
-      <ul className="prose">
-        <li>
-          <Link href="https://github.com/jcdea">JcdeA on github</Link>
-        </li>
-        <li>
-          <Link href="mailto:jcde@jcde.xyz">jcde@jcde.xyz</Link>
-        </li>
-        <li>
-          <Link href="https://discord.com">io@8106 on Discord</Link>
-        </li>
-        <li>
-          <Link href="https://reddit.com/u/jhc0767">u/jhc0767 on Reddit</Link>
-        </li>
-      </ul>
+      <p className="pt-8 text-2xl ">Contact me:</p>
+      <div className="prose pb-20">
+        <ul>
+          <li>
+            <Link href="mailto:jcde@jcde.xyz">jcde@jcde.xyz</Link>
+          </li>
+          <li>
+            io#8106 @ <Link href="https://discord.com">Discord</Link>
+          </li>
+          <li>
+            u/jhc0767 @ <Link href="https://reddit.com/jhc0767">Reddit</Link>
+          </li>
+        </ul>
+      </div>
     </>
   )
-}
-export async function getServerSideProps(): Promise<Record<string, unknown>> {
-  const descs = [
-    '<div class="max-w-2xl"><span class="inline-block ">The Student developer&nbsp;</span><span class="inline hover:underline font-bold"><br>your grandparents warned you about</span></div>',
-    '<div class="max-w-2xl"><span class="inline-block">Student developer building&nbsp;</span><span class="inline font-bold hover:underline">unique experiences</span> </div>',
-    '<div class="max-w-2xl"><span class="inline-block"><span class="inline font-bold hover:underline">Agile </span>student developer developing&nbsp;</span><span class="inline hover:underline font-bold">interesting,<br> </span>(but useless) projects</div>',
-  ]
-
-  const random = Math.floor(Math.random() * descs.length)
-  return {
-    props: { desc: descs[random] }, // will be passed to the page component as props
-  }
 }
 
 export default Home

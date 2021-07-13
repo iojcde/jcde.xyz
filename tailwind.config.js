@@ -1,7 +1,6 @@
 const { colors } = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  mode:'jit',
   purge: ['./components/*.{js,ts,jsx,tsx,mdx}', './components/**/*.{js,ts,jsx,tsx,mdx}', './pages/*.{js,ts,jsx,tsx,mdx}', './pages/**/*.{js,ts,jsx,tsx,mdx}'],
   darkMode: 'class',
   prefix: '',
@@ -51,15 +50,15 @@ module.exports = {
             },
             h1: {
               color: theme('colors.gray.800'),
-              'font-size': '2.5rem',
+              'font-size': '2rem',
               'margin-top': '1rem',
               'margin-bottom': '0.5rem'
             },
             h2: {
               color: theme('colors.gray.800'),
-              'font-size':'1.8rem',
+              'font-size':'1.5rem',
               'margin-top': '0.5rem',
-              'font-weight':'500'
+              'font-weight':'400'
 
             },
             h3: {
@@ -78,9 +77,11 @@ module.exports = {
               }
             },
             p: {
-              color: theme('colors.gray.800'),
+              color: theme('colors.gray.900'),
+              'font-size': '1.05rem',
               'margin-top': '0',
-              'margin-bottom': '1em'
+              'font-weight':'400',
+              'margin-bottom': '1.2em'
             },
             img: {
               'margin-top': '0',

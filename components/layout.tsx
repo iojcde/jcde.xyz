@@ -1,7 +1,6 @@
 import Footer from 'components/footer'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import SEO from 'components/seo'
 type LayoutProps = {
   children: React.ReactNode
 }

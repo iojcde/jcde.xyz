@@ -87,8 +87,13 @@
   color:white;
 }
 .hover-rotate {
-  transition: transform .7s ease-in-out;
+  transition: transform .2s ease-in;
 }
 .hover-rotate:hover {
+  transition: transform .2s ease-in;
+  transform: rotate(100deg);
+}
+.hover-rotate:active {
+  transition: transform .7s ease-in;
   transform: rotate(360deg);
 }

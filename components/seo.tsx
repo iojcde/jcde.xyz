@@ -6,10 +6,6 @@ const SEO: React.FC<{ title: string }> = ({ title }) => {
         {title} - JcdeA{"'"}s Porfolio
       </title>
       <meta name="description" content="JcdeA's portfolio"></meta>
-      <link
-        rel="prefetch"
-        href="https://github-readme-stats.vercel.app/api?username=JcdeA&count_private=true"
-      />
 
       <link
         rel="preload"
